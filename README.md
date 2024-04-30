@@ -449,3 +449,144 @@ int main()
 ## RESULT:
 Thus, the above program is executed successfully.
 
+# EX.NO: 4A
+# DATE:
+## Write a C program to break the 70089 into smallest possible number of bank notes.
+(Note: The possible banknotes are 100, 50, 5, 2 and 1).
+## AIM:
+To Write a C program to break the 70089 into smallest possible number of bank notes.
+(Note: The possible banknotes are 100, 50, 5, 2 and 1).
+
+## PROGRAM:
+```
+#include <stdio.h>
+int main() {
+	int amt=70089, total;
+	total = (int)amt/100;
+	printf("There are: ");
+	printf("\n%d Note(s) of 100.00\n", total);
+	amt = amt-(total*100);
+	total = (int)amt/50;
+	printf("%d Note(s) of 50.00\n", total);
+	amt = amt-(total*50);
+	total = (int)amt/5;
+	printf("%d Note(s) of 5.00\n", total);
+	amt = amt-(total*5);
+	total = (int)amt/2;
+	printf("%d Note(s) of 2.00\n", total);
+	amt = amt-(total*2);
+	total = (int)amt/1;
+	printf("%d Note(s) of 1.00\n", total);
+	return 0;
+}
+
+```
+## OUTPUT:
+![image](https://github.com/Gokhulraj2005/fundamentals-of-c/assets/138849253/d6408515-f24c-4ea1-b33e-46e2234ba03e)
+
+
+## RESULT:
+Thus, the above program is executed successfully.
+# EX.NO: 4B
+# DATE:
+## Write a program in C to read any Month Number in integer and display the number of days for this month using a switch case.
+
+## AIM:
+To Write a program in C to read any Month Number in integer and display the number of days for this month using a switch case.
+## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    int month;
+
+    scanf("%d", &month);
+    switch (month) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            printf("31 days.\n");
+            break;
+        case 4: case 6: case 9: case 11:
+            printf("30 days.\n");
+            break;
+        case 2:
+            printf("February -28 days.\nin leap year The February month  Have 29 days.");
+            break;
+        default:
+            printf("invalid Month number.\nPlease try again ....");
+    }
+
+    return 0;
+}
+
+
+```
+## OUTPUT:
+![image](https://github.com/Gokhulraj2005/fundamentals-of-c/assets/138849253/c879bcd2-bb89-47c7-b092-f2ea2bc0671f)
+
+## RESULT:
+Thus, the above program is executed successfully.
+
+# EX.NO: 4C
+# DATE:
+## To convert the string 'INDIA' into lowercase
+## AIM:
+To  convert the string 'INDIA' into lowercase
+
+## PROGRAM:
+```
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+  char str[30];
+  
+  scanf("%[^\n]", str);
+  int i = 0;
+  while (str[i] != '\0')
+  {
+    if (str[i] > 64 && str[i] < 91) 
+      str[i] += 32;
+    i++;
+  }
+  printf("Lower case String is:%s", str);
+}
+```
+## OUTPUT:
+![image](https://github.com/Gokhulraj2005/fundamentals-of-c/assets/138849253/8f3cb5f0-cf7a-4bee-91f1-9f4d316faa85)
+
+
+## RESULT:
+Thus, the above program is executed successfully.
+
+
+# EX.NO: 4D
+# DATE:
+## Write a C program to convert a string from lowercase to uppercase 
+## AIM:
+Write a C program to convert a string from lowercase to uppercase 
+## PROGRAM:
+```
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int i;
+    char a[100];
+    scanf("%[^\n]",a);
+    for(i=0;i<=strlen(a);i++)
+    {
+        if(a[i]>='a'&&a[i]<='z')
+        {
+            a[i]=a[i]-32;
+        }
+    }
+    printf("%s",a);
+}
+```
+## OUTPUT:
+![image](https://github.com/Gokhulraj2005/fundamentals-of-c/assets/138849253/9f063acf-75fc-40d1-ad39-ff8b2ea33b51)
+
+## RESULT:
+Thus, the above program is executed successfully.
+
+
