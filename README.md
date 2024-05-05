@@ -590,3 +590,208 @@ int main()
 Thus, the above program is executed successfully.
 
 
+# EX.NO: 5A
+# DATE:
+## write a c program to find factorial of the number  '10' using pointer:
+
+
+## AIM:
+To Write a C program to convert a string from lowercase to uppercase 
+## PROGRAM:
+```
+# include <stdio.h>
+int  main( )
+{
+int  num, fact=1 ;
+int  *pn, *pf ;
+
+scanf("%d",&num) ;
+
+pn = & num ;
+pf = & fact ;
+
+do
+{
+*pf = ( *pf ) * ( *pn ) ;
+*pn = *pn - 1 ;
+}while(  *pn > 0) ;
+printf("Factorial of entered number is : %d ",*pf) ;
+return 0;
+}
+```
+## OUTPUT:
+![image](https://github.com/Gokhulraj2005/fundamentals-of-c/assets/138849253/48a7a1d6-e903-4faf-8f8d-7353aaa73e70)
+
+## RESULT:
+Thus, the above program is executed successfully.
+
+# EX.NO: 5B
+# DATE:
+## Write a C program to swap any three values using function pointers (using a temporary variable) 
+
+## AIM:
+To Write a C program to swap any three values using function pointers (using a temporary variable) 
+## PROGRAM:
+```
+#include <stdio.h>
+void swap (int *a, int *b, int *c);
+int main() 
+{
+  int m, n, o;
+  scanf ("%d%d%d", &m, &n, &o);
+  printf("m is %d, n is %d, o is %d\n", m, n, o);
+  printf("m is %d, n is %d, o is %d\n", n,o,m);
+  return 0;
+}
+void swap (int *a, int *b, int * c) 
+{
+  
+  *c = *a - (*b + *c);
+  *a = *a - (*b + *c);
+}
+
+```
+## OUTPUT:
+![image](https://github.com/Gokhulraj2005/fundamentals-of-c/assets/138849253/cb3633f7-c7d8-4a28-9fcc-24b40676cb35)
+
+## RESULT:
+Thus, the above program is executed successfully.
+
+# EX.NO: 5C
+# DATE:
+## Write a C Program to print the Opposite Diagonal Elements of a Matrix[3x3]
+## AIM:
+To Write a C Program to print the Opposite Diagonal Elements of a Matrix[3x3]
+## PROGRAM:
+```
+#include <stdio.h>
+void swap (int *a, int *b, int *c);
+int main() 
+{
+  int m, n, o;
+  scanf ("%d%d%d", &m, &n, &o);
+  printf("m is %d, n is %d, o is %d\n", m, n, o);
+  printf("m is %d, n is %d, o is %d\n", n,o,m);
+  return 0;
+}
+void swap (int *a, int *b, int * c) 
+{
+  
+  *c = *a - (*b + *c);
+  *a = *a - (*b + *c);
+}
+
+```
+## OUTPUT:
+![image](https://github.com/Gokhulraj2005/fundamentals-of-c/assets/138849253/eb4ccf1b-8897-4b0c-8ce1-8dec108d4f8a)
+
+## RESULT:
+Thus, the above program is executed successfully.
+
+# EX.NO: 5D
+# DATE:
+## Write C program for the below half diamond string pattern in C.
+## AIM:
+To Write C program for the below half diamond string pattern in C.
+## PROGRAM:
+```
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    
+    scanf("%s", str);
+    
+    int len = strlen(str);
+    
+    // Upper half
+    for(int i = 0; i < len; i++) {
+        for(int j = 0; j <= i; j++) {
+            printf("%c", str[j]);
+        }
+        printf("\n");
+    }
+    
+    // Lower half
+    for(int i = 1; i < len; i++) {
+        for(int j = i; j < len; j++) {
+            printf("%c", str[j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+
+
+```
+## OUTPUT:
+![image](https://github.com/Gokhulraj2005/fundamentals-of-c/assets/138849253/f4797eac-d4b1-4d72-a9bc-8bfe53dcf2ea)
+
+## RESULT:
+Thus, the above program is executed successfully.
+
+# EX.NO: 6A
+# DATE:
+## write a c program to find sum and average in the range from 70 to 85 using pointer.
+## AIM:
+To write a c program to find sum and average in the range from 70 to 85 using pointer.
+## PROGRAM:
+```
+#include<stdio.h>
+int main()
+{
+    float a,b,sum,average;
+    float *A=&a, *B=&b, *s=&sum, *av=&average;
+    scanf("%f %f ",&a,&b);
+    for (int i=*A; i<=*B; i++)
+    {
+        *s+=i;
+    }
+    
+    *av=*s/(*B-*A+1);
+    printf("Sum= %.2f, Average= %.2f",*s,*av);
+    
+}
+
+```
+## OUTPUT:
+![image](https://github.com/Gokhulraj2005/fundamentals-of-c/assets/138849253/54b08177-09eb-4470-95ff-af2fb616951e)
+
+## RESULT:
+Thus, the above program is executed successfully.
+
+
+# EX.NO: 6B
+# DATE:
+## Write a C program to add two floating point numbers using pointers in which memory allocated using malloc(). 
+## AIM:
+To Write a C program to add two floating point numbers using pointers in which memory allocated using malloc(). 
+## PROGRAM:
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float a,b,*ptr;
+    scanf("%f %f",&a,&b);
+    ptr=(float*)calloc(2,sizeof(float));
+    if (ptr==NULL)
+    printf("Memory not allocated");
+    else
+    {
+        *ptr=a;
+        *(ptr+1)=b;
+        printf("%.6f ",*ptr+*(ptr+1));
+    }
+ 
+}
+
+```
+## OUTPUT:
+![image](https://github.com/Gokhulraj2005/fundamentals-of-c/assets/138849253/c05bf783-7d99-4b89-ba1f-6f943dac6970)
+
+## RESULT:
+Thus, the above program is executed successfully.
