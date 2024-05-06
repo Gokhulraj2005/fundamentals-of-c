@@ -795,3 +795,98 @@ int main()
 
 ## RESULT:
 Thus, the above program is executed successfully.
+
+
+# EX.NO: 6C
+# DATE:
+## Write a program to store information of Employee (id, name, salary) using function with structure.
+## AIM:
+To Write a program to store information of Employee (id, name, salary) using function with structure.
+## PROGRAM:
+```
+#include <stdio.h>
+int main()
+{
+    struct emp  
+{
+    int i;
+    char a[20];
+    float b;
+};
+
+    struct emp s;
+    scanf("%d",&s.i);
+    scanf("%s",s.a);
+    scanf("%f",&s.b);
+    
+    printf("Id is: %d\n",s.i);
+    printf("Name is: %s\n",s.a);
+    printf("salary is: %.2f",s.b);
+
+}
+```
+## OUTPUT:
+![image](https://github.com/Gokhulraj2005/fundamentals-of-c/assets/138849253/8658f685-8da7-43e6-968c-3df02fabe83b)
+
+
+## RESULT:
+Thus, the above program is executed successfully.
+
+
+# EX.NO: 6D
+# DATE:
+## Create a structure to read customer no,prev reading & current reading as input for eb calculation bill for 3 Customers( first 100 unit 2 Rs per unit ,101 to 200 rs.3 per unit and above 200 rs 5 per unit)
+
+
+## AIM:
+To Create a structure to read customer no,prev reading & current reading as input for eb calculation bill for 3 Customers( first 100 unit 2 Rs per unit ,101 to 200 rs.3 per unit and above 200 rs 5 per unit)
+
+
+## PROGRAM:
+```
+#include <stdio.h>
+struct electricity
+{
+    int cust_no;
+    int prev_read;
+    int curr_read;
+    int units;
+    float bill;
+};
+int main()
+{
+    struct electricity e[3];
+for(int i=0; i<3; i++)
+    {
+scanf("%d %d %d", &e[i].cust_no, &e[i].prev_read, &e[i].curr_read);
+    }
+for(int i=0; i<3; i++)
+    {
+        e[i].units = e[i].curr_read - e[i].prev_read;
+        if(e[i].units<= 100)
+        {
+            e[i].bill = e[i].units * 2;
+        }
+        else if(e[i].units> 100 && e[i].units <=200)
+        {
+            e[i].bill = (100 * 2) + ((e[i].units - 100) * 3);
+        }
+        else
+        {
+            e[i].bill = (100 * 2) + (100 * 3) + ((e[i].units - 200) * 5);
+        }
+    }
+printf("Details of the EB Customer\n");
+for(int i=0; i<3; i++)
+    {
+printf("%d      %.2f\n", e[i].cust_no, e[i].bill);
+    }
+    return 0;
+}
+
+```
+## OUTPUT:
+![image](https://github.com/Gokhulraj2005/fundamentals-of-c/assets/138849253/eedb81f2-48f1-4589-a783-2af544759093)
+
+## RESULT:
+Thus, the above program is executed successfully.
